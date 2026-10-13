@@ -1,4 +1,4 @@
-## Hi there 👋
+## 풀스택 개발자, 김경민입니다.
 
 <!--
 **kyeongminn/kyeongminn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
