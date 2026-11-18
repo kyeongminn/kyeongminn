@@ -5,7 +5,6 @@
 <br><br>
 
 <p>
-  <a href="#-recent-work"><img src="https://img.shields.io/badge/Recent%20Work-2563EB?style=for-the-badge" alt="Recent Work" /></a>
   <a href="#-tech-stack"><img src="https://img.shields.io/badge/Tech%20Stack-0F172A?style=for-the-badge" alt="Tech Stack" /></a>
   <a href="#-projects"><img src="https://img.shields.io/badge/Projects-0F172A?style=for-the-badge" alt="Projects" /></a>
   <a href="#-education--awards"><img src="https://img.shields.io/badge/Education%20%26%20Awards-0F172A?style=for-the-badge" alt="Education and Awards" /></a>
@@ -29,15 +28,6 @@
     </td>
   </tr>
 </table>
-
-## 🔭 Recent Work
-
-> **ORQ** — 반송 차량(OHT)이 로컬에 남기는 로그를 모아 저장하고, 대시보드에서 검색·관제하는 사내망 설치형 로그 파이프라인<br>
-> <sub>SSAFY 자율 프로젝트 · 기업 연계 · 2026.10 ~ 11 · Spring Boot · Kafka · ClickHouse · React · Three.js</sub>
-
-- 한 서버가 맡던 수신·저장·조회를 **실행 역할(`ingest` · `store` · `api`)로 분리**하고, 로드밸런서 뒤에서 수신 서버를 늘릴 수 있게 구성
-- gzip 본문 수신과 **유입 상한** — 동시 요청 수·처리 중 바이트가 한도를 넘으면 큐에 넣기 전에 바로 거절하고, 원인별로 응답 코드를 구분
-- 차량별 상태·알람·오류 비율로 **관제 상태를 판정하는 API**와, 이를 보여주는 **3D 관제 대시보드** 화면
 
 ## 🛠 Tech Stack
 
