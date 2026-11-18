@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-label="Kim Kyeong Min — 화면부터 서버의 상태까지, 서비스의 흐름을 잇는 개발자">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/>
+      <stop offset="0.55" stop-color="#0F1E3D"/>
+      <stop offset="1" stop-color="#1D3A8A"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <clipPath id="round"><rect width="1200" height="320" rx="18"/></clipPath>
+    <style>
+      .name   { font: 700 58px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #F8FAFC; letter-spacing: -1px; }
+      .tag    { font: 500 21px 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; fill: #CBD5E1; }
+      .kicker { font: 600 14px 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #7DD3FC; letter-spacing: 3px; }
+      .label  { font: 600 13px 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #E2E8F0; letter-spacing: 1px; }
+      .sub    { font: 400 11px 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #94A3B8; }
+      .flow   { fill: none; stroke: url(#line); stroke-width: 2; stroke-dasharray: 6 10; animation: dash 1.6s linear infinite; }
+      .node   { fill: #0B1120; stroke-width: 2; }
+      .fade   { opacity: 0; animation: rise 0.9s ease-out forwards; }
+      .d1 { animation-delay: 0.15s; } .d2 { animation-delay: 0.35s; } .d3 { animation-delay: 0.55s; }
+      .pulse  { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .p2 { animation-delay: 0.8s; } .p3 { animation-delay: 1.6s; }
+      .caret  { fill: #7DD3FC; animation: blink 1.1s steps(1) infinite; }
+      @keyframes dash  { to { stroke-dashoffset: -32; } }
+      @keyframes rise  { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes pulse { 0%, 100% { opacity: 0.25; transform: scale(1); } 50% { opacity: 0; transform: scale(1.9); } }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) {
+        .flow, .pulse, .caret { animation: none; }
+        .fade { animation: none; opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#grid)"/>
+    <rect width="1200" height="320" fill="url(#glow)"/>
+
+    <!-- text -->
+    <g class="fade d1">
+      <text x="72" y="92" class="kicker">BACKEND · WEB &amp; MOBILE · DATA</text>
+    </g>
+    <g class="fade d2">
+      <text x="70" y="162" class="name">Kim Kyeong Min<tspan class="caret" dx="6">_</tspan></text>
+    </g>
+    <g class="fade d3">
+      <text x="72" y="208" class="tag">화면부터 서버의 상태까지, 서비스의 흐름을 잇는 개발자</text>
+    </g>
+
+    <!-- flow diagram: client → server → data -->
+    <g class="fade d3">
+      <path class="flow" d="M770 150 C 820 150, 820 110, 880 110"/>
+      <path class="flow" d="M770 150 C 820 150, 820 200, 880 200"/>
+      <path class="flow" d="M920 110 C 980 110, 980 150, 1040 150"/>
+      <path class="flow" d="M920 200 C 980 200, 980 150, 1040 150"/>
+
+      <circle r="4" fill="#F8FAFC">
+        <animateMotion dur="3.2s" repeatCount="indefinite" path="M770 150 C 820 150, 820 110, 880 110 L920 110 C 980 110, 980 150, 1040 150"/>
+      </circle>
+      <circle r="4" fill="#F8FAFC" opacity="0.7">
+        <animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite" path="M770 150 C 820 150, 820 200, 880 200 L920 200 C 980 200, 980 150, 1040 150"/>
+      </circle>
+
+      <circle class="pulse" cx="750" cy="150" r="20" fill="#38BDF8"/>
+      <circle class="pulse p2" cx="900" cy="110" r="20" fill="#818CF8"/>
+      <circle class="pulse p2" cx="900" cy="200" r="20" fill="#818CF8"/>
+      <circle class="pulse p3" cx="1060" cy="150" r="20" fill="#34D399"/>
+
+      <circle class="node" cx="750" cy="150" r="20" stroke="#38BDF8"/>
+      <circle class="node" cx="900" cy="110" r="20" stroke="#818CF8"/>
+      <circle class="node" cx="900" cy="200" r="20" stroke="#818CF8"/>
+      <circle class="node" cx="1060" cy="150" r="20" stroke="#34D399"/>
+
+      <!-- node glyphs -->
+      <rect x="741" y="143" width="18" height="12" rx="2" fill="none" stroke="#38BDF8" stroke-width="1.6"/>
+      <path d="M746 159h8" stroke="#38BDF8" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M892 105h16M892 110h16M892 115h16" stroke="#818CF8" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M893 196l-4 4 4 4M907 196l4 4-4 4" fill="none" stroke="#818CF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="1060" cy="144" rx="8" ry="3" fill="none" stroke="#34D399" stroke-width="1.6"/>
+      <path d="M1052 144v12c0 1.7 3.6 3 8 3s8-1.300 8-3v-12" fill="none" stroke="#34D399" stroke-width="1.6"/>
+
+      <text x="750" y="194" text-anchor="middle" class="label">CLIENT</text>
+      <text x="750" y="210" text-anchor="middle" class="sub">React · Flutter</text>
+      <text x="900" y="72" text-anchor="middle" class="label">SERVER</text>
+      <text x="900" y="244" text-anchor="middle" class="sub">Spring · Kafka · STOMP</text>
+      <text x="1060" y="194" text-anchor="middle" class="label">DATA</text>
+      <text x="1060" y="210" text-anchor="middle" class="sub">PostgreSQL · Redis</text>
+    </g>
+
+    <rect x="72" y="246" width="56" height="4" rx="2" fill="url(#line)" class="fade d3"/>
+  </g>
+</svg>
