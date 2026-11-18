@@ -12,23 +12,6 @@
 
 </div>
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <h4>⚙️ Backend</h4>
-      인증·권한, 실시간 메시지 처리,<br>트랜잭션과 상태 복원,<br>유입 제어와 운영 지표
-    </td>
-    <td width="33%" valign="top">
-      <h4>🖥️ Web &amp; Mobile</h4>
-      API 연동과 오류 처리,<br>비동기 응답 처리,<br>공통 컴포넌트와 사용자 흐름
-    </td>
-    <td width="33%" valign="top">
-      <h4>📊 Data</h4>
-      공공데이터 수집·정제·결합,<br>리뷰 감성분석,<br>지도 시각화
-    </td>
-  </tr>
-</table>
-
 ## 🛠 Tech Stack
 
 **Backend**
